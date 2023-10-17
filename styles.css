@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.main-bbq {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    & .section {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+    }
+
+    & .section-title {
+        position: relative;
+        color: white;
+
+        & .img-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=1635');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position-y: center;
+            background-position-x: center;
+            background-color: #a8a8a8;
+            background-blend-mode: multiply;
+            filter: blur(2px);
+            z-index: -1;
+        }
+
+        & .info {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            color: orange;
+            text-align: center;
+            padding: 0 1em 1em 1em;
+
+            & p {
+                margin: 0;
+                border-top: 5px solid orange;
+                font-weight: bold;
+                font-size: 1rem;
+            }
+
+            & h1 {
+                font-size: 9vw;
+                font-weight: 100;
+                color: white;
+
+                & span {
+                    font-weight: bold;
+                }
+            }
+
+            & h2 {
+                margin: 0;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    & .section-form {
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 2em 1em;
+        color: #232323;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & h2 {
+            margin: 0 0 0.5em 0;
+            line-height: 1em;
+
+            & span {
+                color: orange;
+                font-size: 0.8em;
+                font-weight: bold;
+            }
+        }
+
+        & p {
+            margin: 0;
+            font-size: 4vw;
+        }
+
+        & form {
+            margin: 1em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            & input {
+                margin-bottom: 1em;
+                font-size: inherit;
+                font-family: inherit;
+                text-align: center;
+                border: 1px solid rgb(218, 218, 218);
+                border-radius: 5px;
+                padding: 0.2em 2em;
+                color: gray;
+            }
+
+            & input:focus {
+                outline: none;
+                box-shadow: 0 0 10px orange;
+                background-color: rgb(245, 245, 245);
+            }
+
+            & button {
+                font-size: inherit;
+                font-family: inherit;
+                padding: 0.2em 5.6em;
+                background: linear-gradient(to right, orange, orangered);
+                border: none;
+                border-radius: 5px;
+                color: white;
+                font-weight: 600;
+                cursor: pointer;
+            }
+
+            & button:active {
+                background: linear-gradient(to right, rgb(235, 152, 0), rgb(224, 60, 0));
+            }
+
+            & p {
+                font-size: 0.8rem;
+                margin: 0.5em;
+                color: #a8a8a8;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1000px) {
+    
+    .main-bbq {
+        flex-direction: row;
+
+        & .section-title {
+
+            & .info {
+                padding: 0 2em 2em 2em;
+
+                & h1 {
+                    font-size: 6vw;
+                }
+            }
+
+        }
+        
+        & .section-form {
+
+            & p {
+                font-size: 1.5vw;
+                margin: 1.5em 2em 1em 2em;
+            }
+        }
+    }
+
+}
