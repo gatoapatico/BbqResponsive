@@ -37,7 +37,7 @@ html, body {
             background-position-x: center;
             background-color: #a8a8a8;
             background-blend-mode: multiply;
-            filter: blur(2px);
+            filter: blur(1px);
             z-index: -1;
         }
 
@@ -55,7 +55,7 @@ html, body {
                 margin: 0;
                 border-top: 5px solid orange;
                 font-weight: bold;
-                font-size: 1rem;
+                font-size: 4vw;
             }
 
             & h1 {
@@ -70,7 +70,7 @@ html, body {
 
             & h2 {
                 margin: 0;
-                font-size: 2rem;
+                font-size: 4vw;
             }
         }
     }
@@ -83,6 +83,7 @@ html, body {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
 
         & h2 {
             margin: 0 0 0.5em 0;
@@ -103,8 +104,8 @@ html, body {
         & form {
             margin: 1em;
             display: flex;
+            width: 70%;
             flex-direction: column;
-            align-items: center;
 
             & input {
                 margin-bottom: 1em;
@@ -113,7 +114,7 @@ html, body {
                 text-align: center;
                 border: 1px solid rgb(218, 218, 218);
                 border-radius: 5px;
-                padding: 0.2em 2em;
+                padding: 0.2em;
                 color: gray;
             }
 
@@ -126,7 +127,7 @@ html, body {
             & button {
                 font-size: inherit;
                 font-family: inherit;
-                padding: 0.2em 5.6em;
+                padding: 0.2em;
                 background: linear-gradient(to right, orange, orangered);
                 border: none;
                 border-radius: 5px;
@@ -159,8 +160,16 @@ html, body {
             & .info {
                 padding: 0 2em 2em 2em;
 
+                & p {
+                    font-size: 2vw;
+                }
+
                 & h1 {
                     font-size: 6vw;
+                }
+
+                & h2 {
+                    font-size: 2vw;
                 }
             }
 
